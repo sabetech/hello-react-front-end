@@ -20,12 +20,12 @@ export const greetingsSlice = createSlice({
       state.status = 'LOADING';
     },
     [fetchGreetings.fulfilled]: (state, action) => {
-      state.status = "SUCCESS";
+      state.status = 'SUCCESS';
       state.greetings[0] = action.payload;
     },
 
     [fetchGreetings.rejected]: (state, action) => {
-      state.status = "ERROR";
+      state.status = 'ERROR';
       state.error = action.error.message;
     },
   },
